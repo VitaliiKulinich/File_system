@@ -18,11 +18,11 @@ class Driver:
 
     def fstat(self, name):
         if self._file_system:
-            self._file_system.find_file_descriptor_by_name(name)
+            return self._file_system.find_file_descriptor_by_name(name)
 
     def ls(self):
         if self._file_system:
-            self._file_system.dir.dir_links()
+            return self._file_system.dir.dir_links
 
     def create(self, name):
         if self._file_system:
